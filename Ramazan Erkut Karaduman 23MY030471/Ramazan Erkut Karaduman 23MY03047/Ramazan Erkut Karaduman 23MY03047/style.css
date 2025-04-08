@@ -1,0 +1,394 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-family: 'Prompt', sans-serif;
+    scroll-behavior: smooth;
+    list-style: none;
+    text-decoration: none;
+}
+html {
+    scroll-behavior: smooth;
+    margin: 0px !important;
+    padding: 0px !important;
+    width: 100%;
+    height: 100%;
+  }
+  
+  body {
+    width: 100%;
+    height: 100%;
+    margin: 0px !important;
+    padding: 0px !important;
+    position: relative;
+    overflow-x: hidden;
+  }
+
+header{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 35px 100px;
+    transition: 0.5s linear;
+    background-image: linear-gradient(to right,rgb(79, 7, 7), rgb(2, 2, 2));
+}
+
+.navbar{
+    display: flex;
+    margin-left: -5rem;
+}
+
+.navbar a{
+    padding: 0.37rem 1rem;
+    color: white;
+    font-size: 2rem;
+     text-transform: capitalize;
+    font-weight: 600;
+}
+
+.navbar a:hover{
+     font-size: 1.45rem;
+    font-weight: 600;
+    border-radius: 30px;
+    border: 5px solid rgb(255, 255, 255);
+    background-color: rgb(79, 7, 7);
+    color:rgb(255, 255, 255);
+    transition: 0.2s all ease-in-out;
+}
+
+.header_icon{
+    top: 20px;
+    font-size: 30px;
+    cursor: pointer;
+    z-index: 1;
+     display: flex;
+    column-gap: 1.9rem; 
+    color: aliceblue;
+}
+
+.header_icon .bx:hover{
+    color: red;
+}
+
+/*  Page */
+
+ section{
+    padding: 3rem 6rem;
+}
+.row{
+    height: 100%;
+    width: 100%;
+    display: flex;
+}
+.row .col-1,.row .col-2{
+    flex-basis: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.row .col-1{
+    padding-left: 5%;
+}
+.row .col-1 h1{
+     font-size: 74px;
+     line-height: 100px;
+     margin-bottom: 5px;
+}
+.row .col-1 p{
+    padding-right: 10px;
+    line-height: 1.4;
+}
+.row .col-1 .price{
+    display: flex;
+    align-items: flex-end;
+    column-gap: 10px;
+    margin-top: 10px;
+    
+}
+.row .col-1 h2{
+    font-size: 25px;
+    line-height: 1;
+}
+  .row .col-1 .buttons{
+    display: flex;
+    column-gap: 10px;
+    flex-wrap: wrap;
+} 
+.col-1 .buttons a, 
+.col-1 .buttons button{
+    display: inline-block;
+    width: fit-content;
+    padding: 18px 50px;
+    border: none;
+    color: #fff;
+    font-size: 18px;
+    margin-top: 20px;
+    text-decoration: none;
+    cursor: pointer;
+    background: red;
+}
+
+.col-1 .buttons a:hover, 
+.col-1 .buttons button:hover{
+    background-color: #aa0505;
+    transform: translateY(-5); 
+}
+.col-2 .feature-img{
+    width: 100%;
+    text-align: center;
+}
+.col-2 .feature-img img{ 
+    width: 80%;
+    transform: rotate(+20deg);
+    
+}
+.row{
+    background: #ffa8a8;
+}
+
+/* Products Page */
+
+.heading{
+    text-align: center;
+    width: 100%;
+}
+
+.heading h2{
+    font-size: 2.8rem;
+    text-transform: uppercase;
+    color: black;
+}
+
+.products-container{
+    display: flex;
+    gap: 2.8rem;
+    margin-top: 2.5rem;
+
+}
+section.producst{
+    background: #5B1414;
+}
+.products-container .box{
+    position: relative;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1.5rem;
+}
+
+.products-container img{
+
+    width: 100%;
+    border-radius: 1.5rem;
+    height: 240px;
+    padding: 20px;
+}
+
+.products-container .box h3{
+
+    font-size: 1.4rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: rgb(122, 13,13);
+}
+
+.products-container .box .content a{ 
+    color: black;
+    border: 2px solid rebeccapurple; 
+    text-transform: uppercase;
+}
+
+.products-container .box .content a:hover{
+    color: rgb(122, 13,13);
+    border: 3px solid black;
+    background-color: rgb(160, 160, 160);
+}
+
+
+.customers-container{
+    display: flex;
+}
+
+#customers .heading h1{
+    font-size: 40px;
+    text-transform: uppercase;
+}
+
+.customers-container .box{
+    padding: 1.2rem;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 1.5rem;
+    box-shadow: 3px 5px 9px 3px rgb(129,6,6);
+    margin: 0 1.4rem;
+}
+
+.stars .bx{
+    color: rgb(129,6,6);
+}
+
+
+.customers-container .box img{
+    width: 90px;
+    height: 120px;
+}
+
+.customers-container .box:hover{
+    font-size: 1rem;
+    color: black;
+    background-color: rgb(122, 13, 13);
+    transition: 0.2s all linear;
+} */
+
+/*  Footer */
+
+.footer{
+    display: flex;
+}
+
+.footer-box h2{
+    font-size: 1.9rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+
+
+.social{
+    display: flex;
+    align-items: center;
+    
+}
+
+.social .bx{
+    font-size: 23px;
+    color: white;
+    padding: 7px;
+    background-color: rgb(79, 7, 7);
+    
+}
+
+.social .bx:hover{
+    background-color: white;
+    color: rgb(79, 7, 7);
+    font-size: 26px;
+    transform: 0.3s linear;
+}
+
+.footer-box li a{
+    color: black;
+    font-size: 1.1rem;
+}
+
+.footer-box li a:hover{
+    color: rgb(79, 7, 7);
+}
+
+
+.copyright{
+    text-align: center;
+    padding: 20px 20px 20px;
+    background: rgb(129,6,6);
+    color: white;
+}
+#clock {
+    color: white; /* Saat, dakika ve saniye metni rengi */
+    font-weight: bold; /* Kalın font */
+    margin-left: 20px; /* Saat, dakika ve saniye metni ile navbar arasındaki boşluk */
+    font-size: 18px; /* Saat, dakika ve saniye metni font boyutu */
+}
+.hidden {
+    display: none;
+}
+#date {
+    color: white; /* Saat, dakika ve saniye metni rengi */
+    font-weight: bold; /* Kalın font */
+    margin-left: 20px; /* Saat, dakika ve saniye metni ile navbar arasındaki boşluk */
+    font-size: 18px; /* Saat, dakika ve saniye metni font boyutu */
+}
+/* Sepet logosu */
+.cart-icon {
+    color: #fff;
+    margin-left: auto; /* Sağa yaslanması için */
+    padding: 0 15px; /* Kenar boşluğu */
+    font-size: 24px; /* İkon boyutu */
+    line-height: 60px; /* Navbar yüksekliğiyle hizalama */
+    cursor: pointer; /* Üzerine gelince el işareti */
+}
+.compare-section {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.compare-button {
+    background-color: #4CAF50; /* Yeşil */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+.compare-button:hover {
+    background-color: #45a049; /* Koyu yeşil */
+}
+
+.comparison-result {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.comparison-result table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.comparison-result th, .comparison-result td {
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+.comparison-result th {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.hidden {
+    display: none;
+}
+.notification {
+    position: fixed;
+    top: 10px; /* Bildirimi yukarı kaydır */
+    right: 20px;
+    background-color: #4CAF50; /* Yeşil */
+    color: white;
+    padding: 10px 15px;
+    border-radius: 8px;
+    z-index: 9999;
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.notification.hide {
+    opacity: 0;
+}
+
+
+

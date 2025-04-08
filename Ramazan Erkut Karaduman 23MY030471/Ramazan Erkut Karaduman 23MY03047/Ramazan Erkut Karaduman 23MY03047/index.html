@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shoe World</title>
+
+    <script defer src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+
+    
+    <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@900&family=Prompt:wght@600&display=swap" rel="stylesheet">
+    
+</head>
+<body>
+    
+    
+    <header id="Shoe_World">
+        <a href="https://www.nike.com/tr/" class="shoe_logo" target="_blank">
+            <img src="./img/logo.png" alt="Shoe_World">
+        </a>  
+        <ul class="navbar">
+            <li><a href="#">Home</a></li>
+            <li><a href="#products">Products</a></li>
+            
+            <li><a href="#customers">Customers</a></li>
+            <li><a href="login.html" target="_blank">Login</a></li>
+            <li id="clock" style="margin-left: 20px; font-size: 18px;"></li>
+            <li id="date" style="margin-left: 20px; font-size: 18px;"></li>
+            
+        </ul>
+        
+    
+        
+        <div class="header_icon">
+            
+            <i class='bx bxs-cart cart-icon'></i>
+            
+
+    </div>
+
+    
+            
+                
+            
+        
+    </header>
+    <!-- <div class="login-popup" id="loginPopup">
+        <span class="close" id="closeBtn">&times;</span>
+        <h2>Login</h2>
+        <form class="login-form">
+            <input type="text" placeholder="Username">
+            <input type="password" placeholder="Password">
+            <button type="submit">Login</button>
+        </form>
+    </div> -->
+    
+    
+
+    <div class="row">
+        <div class="col-1">
+            <h1> NİKE <br>Air Jordan</h1>
+            <p>Heritage colors and high-end craft come together to bring you a remixed version of your favorite mid-tops. Inspired by how a lotus (check out the leaf pattern embroidery on the upper) grows from mud, this shoe is built to tell a story. Made with rich leather, an embroidered Swoosh, plus suede for texture, it serves premium looks along with premium comfort.</p>
+            <div class="price">
+                <h2>$175</h2>        
+            </div>
+            <div class="buttons">
+                <button onclick="addToCart()">ADD TO CART</button>
+            <a href="#products">CATEGORIES</a>
+        </div>
+        </div>
+        <div class="col-2">
+            <div class="feature-img" >
+                
+                <a href="https://www.nike.com/tr/t/air-jordan-1-mid-se-ayakkab%C4%B1s%C4%B1-0R5Hgx/DZ2820-601" target="_blank">
+                    <img  src="./img/air.png "  alt="shoe" >
+                </a>
+                
+            </div>
+        </div>
+    </div>
+    <!-- Products Section -->
+
+    <section class="products" id="products">
+        <div class="heading">
+            <h2>Trending Products</h2>
+            <!-- Arama alanı -->
+        <div class="search">
+            <input type="text" id="searchInput" placeholder="Search products..." onkeyup="searchProducts()">
+        </div>
+        <button class="compare" onclick="compareProducts()">Compare Products</button>
+
+        <select id="categoryFilter" onchange="filterProducts()">
+            <option value="all">All Categories</option>
+            <option value="air_force">Air Force</option>
+            <option value="dunk_panda">Dunk Panda</option>
+            <option value="Blazer_Mid">Blazer Mid</option>
+            <option value="jordan_travis">Jordan Travis</option>
+            <option value="jordan_craft">Jordan Craft</option>
+            <option value="airforce_shadow">Air Force Shadow</option>
+            <!-- Diğer kategoriler buraya eklenecek -->
+        </select>
+        </div>
+        </div>
+        
+        
+        
+        <div class="products-container">
+            <div class="box" data-category="air_force"="">
+                <a href="https://www.nike.com/tr/t/air-force-1-07-60-ayakkab%C4%B1s%C4%B1-0Q1TCG/FV3654-111" target="_blank" >
+                <img src="./img/AYAKKABI 1.png" alt=""></a>
+                <h3>Air Force</h3>
+                <div class="content">
+                    <span>$55</span>
+                    <button onclick="addToCart()">ADD TO CART</button>
+                    <button class="compare-button" onclick="compareProduct('Air Force', 55)">Compare</button> 
+                </div>
+            </div>
+            <div class="box" data-category="dunk_panda">
+                <a href="https://wunder.com.tr/dunk-low-panda-w-dd1503-101" target="_blank" >
+                <img src="./img/AYAKKABI-2.png" alt=""></a>
+                <h3>Dunk Panda</h3>
+                <div class="content">
+                    <span>$60</span>
+                    <button onclick="addToCart()">ADD TO CART</button>
+                    <button class="compare-button" onclick="compareProduct('Dunk Panda', 60)">Compare</button> 
+                </div>
+            </div>
+            <!-- Diğer ürün kutuları buraya eklenecek -->
+            <div class="box" data-category="Blazer_Mid">
+                <a href="https://www.sneaksup.com/nike-blazer-mid-77-jumbo-dd3111-100" target="_blank" >
+                <img src="./img/AYAKKABI-3.png" alt=""></a>
+                <h3>Blazer Mid</h3>
+                <div class="content">
+                    <span>$55</span>
+                    <button onclick="addToCart()">ADD TO CART</button>
+                    <button class="compare-button" onclick="compareProduct('Blazer Mid', 55)">Compare</button> 
+
+                </div>
+            </div>
+            <div class="box" data-category="jordan_travis">
+                <a href="https://www.nike.com/tr/launch/t/air-jordan-1-low-travis-scott-fragment" target="_blank" >
+                <img src="./img/AYAKKABI-4.png" alt=""></a>
+                <h3>Jordan Travis</h3>
+                <div class="content">
+                    <span>$125</span>
+                    <button onclick="addToCart()">ADD TO CART</button>
+                    <button class="compare-button" onclick="compareProduct('Jordan Travis', 125)">Compare</button> 
+                </div>
+            </div>
+            <div class="box" data-category="jordan_craft">
+                <a href="https://wunder.com.tr/air-jordan-1-low-se-craft-light-olive-fd6819-300" target="_blank" >
+                <img src="./img/AYAKKABI-5.png" alt=""></a>
+                <h3>Jordan Craft </h3>
+                <div class="content">
+                    <span>$90</span>
+                    <button onclick="addToCart()">ADD TO CART</button>
+                    <button class="compare-button" onclick="compareProduct('Jordan Craft', 90)">Compare</button>
+                </div>
+            </div>
+            <div class="box" data-category="airforce_shadow">
+                <a href="https://www.barcin.com/nike-air-force-1-shadow-co-kadin-spor-ayakkabi-beyaz-beyaz-karisik-1/" target="_blank" >
+                <img src="./img/AYAKKABI-6.png" alt=""></a>
+                <h3>Air Force Shadow</h3>
+                <div class="content">
+                    <span>$75</span>
+                    <button onclick="addToCart()">ADD TO CART</button>
+                    <button class="compare-button" onclick="compareProduct('Air Force Shadow', 75)">Compare</button>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        </div>
+    </section>
+    
+
+    
+    <!-- Customers  -->
+
+    <section class="customers" id="customers">
+        <div class="heading">
+            <h1>Our Popular Customers</h1>
+        </div>
+
+        
+        <div class="customers-container">
+            <div class="box">
+                <div class="stars">
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star-half' ></i>
+                </div>
+                <p>Sebastian Szymański is a Polish national football player who plays in the midfield position. He also loves our brand very much and is also a sponsor of Nike Syzmanski</p>
+                <h2>Sebastian Szymanski</h2>
+                <img src="./img/syzmanski.jpg" alt="syzmnaski">
+            </div>
+
+            <div class="box">
+                <div class="stars">
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star-half' ></i>
+                </div>
+                <p>Cristiano Ronaldo dos Santos Aveiro is a Portuguese football player who plays for Al-Nassr, one of the Saudi Professional League teams, and is the captain of the Portuguese national team. He announced to everyone that he loved Nike products and the biggest sponsorship deal in history was made.</p>
+                <h2>Cristiano Ronaldo</h2>
+                <img src="./img/ronaldo (1).jpg" alt="">
+            </div>
+
+            <div class="box">
+                <div class="stars">
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star-half' ></i>
+                </div>
+                <p> Lionel Andrés Messi Cuccittini, also known as Leo Messi, is an Argentine football player who plays for Inter Miami, one of the Major League Soccer teams, and is the captain of the Argentina national team. He wears Nike boots in all matches and loves them very much. His first sponsorship agreement is with Nike. </p>
+                <h2>Lion Messi</h2>
+                <img src="./img/messi (1).jpg" alt="">
+            </div>
+        </div>
+    </section>
+    <!--  Footer -->
+
+    <section class="footer">
+        <div class="footer-box">
+            <h2>SHOE WORLD</h2>
+            <p>NİKE, which differentiates itself with the products in its own collection and brings together the world's leading brands with its customers in its stores; It meets fashion lovers with its models suitable for every moment of the day. It gets more inspiration from trends every year and enriches its product range.</p>
+            <div class="social">
+                <a href="https://www.facebook.com/nike/?locale=tr_TR" target="_blank" >
+                <i class='bx bxl-facebook'></i></a>
+                <a href="https://twitter.com/Nike" target="_blank">
+                <i class='bx bxl-twitter' ></i></a>
+                <a href="https://www.instagram.com/nike/" target="_blank" >
+                <i class='bx bxl-instagram' ></i></a>
+                <a href="https://www.youtube.com/user/NIKE" target="_blank">
+                <i class='bx bxl-youtube' ></i></a>
+            </div>
+        </div>
+        <div class="footer-box">
+            <h2>Support</h2>
+            <li><a href="#">Products</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="https://www.nike.com/tr/help/#contact" target="_blank" >Help</a></li>
+            
+        </div>      
+    </section>
+    <div class="copyright">
+        <p>&#169; Nike All Right Reserved </p>
+    </div>
+
+    <script>
+        function showTime() {
+            var date = new Date();
+            var hours = date.getHours();
+            var minutes = date.getMinutes();
+            var seconds = date.getSeconds();
+            hours = hours < 10 ? "0" + hours : hours;
+            minutes = minutes < 10 ? "0" + minutes : minutes;
+            seconds = seconds < 10 ? "0" + seconds : seconds;
+            var time = hours + ":" + minutes + ":" + seconds;
+            document.getElementById("clock").innerText = time;
+            setTimeout(showTime, 1000); // 1 saniyede bir güncelle
+        }
+        showTime(); // Saati göster
+
+        function showDate() {
+            var date = new Date();
+            var day = date.getDate();
+            var month = date.toLocaleString('default', { month: 'long' });
+            var year = date.getFullYear();
+            var fullDate = day + " " + month + " " + year;
+            document.getElementById("date").innerText = fullDate;
+        }
+        showDate(); // Tarihi göster
+
+        function searchProducts() {
+            // Arama işlemleri burada gerçekleştirilecek
+        }
+
+        function filterProducts() {
+            var category = document.getElementById("categoryFilter").value;
+            var boxes = document.querySelectorAll(".box");
+            boxes.forEach(function(box) {
+                var dataCategory = box.getAttribute("data-category");
+                if (category === "all" || category === dataCategory) {
+                    box.style.display = "block";
+                } else {
+                    box.style.display = "none";
+                }
+            });
+        }
+       
+
+        
+
+    </script>
+ 
+</body>
+</html>
